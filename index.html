@@ -607,25 +607,30 @@ label.lbl{font-size:12.5px;font-weight:600;color:var(--tx2)}
 .archivo-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:20px 24px 4px}
 .archivo-h h3{margin:0;font:800 19px var(--txt);font-stretch:112%;letter-spacing:-.2px}
 .archivo-h small{color:var(--tx3);font-size:13.5px}
-.regla-wrap{overflow-x:auto;padding:16px 24px 6px;scrollbar-width:thin}
-.regla{display:flex;align-items:stretch;gap:6px;min-width:100%}
-.mes-g{display:flex;flex-direction:column;min-width:0}
-.mes-g>b{overflow:hidden;text-overflow:ellipsis;font:700 12px var(--txt);font-stretch:118%;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx2);padding:0 0 8px 2px;border-bottom:2px solid var(--tinta);margin-bottom:8px;white-space:nowrap}
-.mes-g.pend>b{color:var(--rojo2);border-bottom-color:var(--rojo)}
-.mes-g .cs{display:flex;gap:4px;flex:1}
-.seg-c{appearance:none;flex:1 1 0;min-width:46px;height:92px;border:0;cursor:pointer;border-radius:4px 10px 4px 4px;position:relative;padding:10px 8px 8px;text-align:left;
-  background:linear-gradient(180deg,var(--kraft) 0%,var(--kraft2) 100%);color:#3D2C12;display:flex;flex-direction:column;justify-content:space-between;transition:transform .15s,box-shadow .15s;font-family:var(--txt)}
-.seg-c::before{content:"";position:absolute;left:0;top:-7px;width:44%;height:9px;border-radius:5px 5px 0 0;background:var(--kraft)}
-.seg-c:nth-child(even){background:linear-gradient(180deg,#E2CDA8,#CFB487)}
-.seg-c:hover{transform:translateY(-3px);box-shadow:0 10px 18px -10px rgba(80,55,20,.55)}
-.seg-c .r{font:600 26px/1 var(--mono);letter-spacing:-1.5px}
-.seg-c .n{font:500 11px var(--mono);opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.seg-c.ult{background:linear-gradient(180deg,#fff 0%,#FBE3E6 100%);box-shadow:inset 0 0 0 2px var(--rojo);color:var(--rojo3)}
-.seg-c.ult::before{background:var(--rojo)}
-.seg-c.pend{background:repeating-linear-gradient(135deg,#fff 0 8px,#FCE9EB 8px 16px);box-shadow:inset 0 0 0 2px var(--rojo-b);color:var(--rojo2)}
-.seg-c.pend::before{display:none}
-.seg-c.pend .r{font-size:22px}
-.regla-eje{display:flex;justify-content:space-between;padding:6px 24px 16px;font:500 12px var(--mono);color:var(--tx3)}
+.archivo-h .lnk-v{margin-left:auto;border:0;background:none;font:600 13.5px var(--txt);color:var(--rojo2);cursor:pointer;padding:4px 0}
+.archivo-h .lnk-v:hover{text-decoration:underline}
+.estantes{padding:10px 24px 22px}
+.mes-f{display:grid;grid-template-columns:130px minmax(0,1fr);gap:18px;padding:18px 0 4px;border-top:1px solid #EEECE8}
+.mes-f:first-child{border-top:0}
+.mes-n b{display:block;font:800 18px var(--txt);font-stretch:112%;letter-spacing:-.2px;color:var(--tinta)}
+.mes-n small{display:block;margin-top:2px;font-size:13px;color:var(--tx3)}
+.cps{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:18px 12px;padding-top:8px}
+.cp{appearance:none;position:relative;border:0;cursor:pointer;text-align:left;font-family:var(--txt);color:#3D2C12;
+  background:linear-gradient(180deg,var(--kraft) 0%,var(--kraft2) 100%);border-radius:4px 12px 8px 8px;padding:14px 12px 11px;
+  display:flex;flex-direction:column;gap:6px;min-height:118px;transition:transform .15s,box-shadow .15s}
+.cp::before{content:"";position:absolute;left:0;top:-8px;width:46%;height:10px;border-radius:6px 6px 0 0;background:var(--kraft)}
+.cp:nth-child(even){background:linear-gradient(180deg,#E2CDA8,#CFB487)}
+.cp:hover{transform:translateY(-3px);box-shadow:0 12px 20px -12px rgba(80,55,20,.6)}
+.cp .r{font:600 28px/1 var(--mono);letter-spacing:-1.5px}
+.cp .g{font:500 12.5px/1.35 var(--mono);color:#4D3A1B}
+.cp .n{margin-top:auto;font-size:12px;font-weight:600;color:#6B5230}
+.cp.ult{background:linear-gradient(180deg,#fff 0%,#FBE3E6 100%);box-shadow:inset 0 0 0 2px var(--rojo);color:var(--rojo3)}
+.cp.ult::before{background:var(--rojo)}
+.cp.ult::after{content:"Última";position:absolute;top:-10px;right:8px;background:var(--rojo);color:#fff;font:700 10.5px var(--txt);letter-spacing:.3px;padding:2px 7px;border-radius:99px}
+.cp.ult .g,.cp.ult .n{color:var(--rojo3)}
+.cp.pend{background:repeating-linear-gradient(135deg,#fff 0 9px,#FCE9EB 9px 18px);box-shadow:inset 0 0 0 2px var(--rojo-b);color:var(--rojo2)}
+.cp.pend::before{display:none}
+.cp.pend .g,.cp.pend .n{color:var(--rojo2)}
 .hechos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #EEECE8}
 .hecho{appearance:none;border:0;background:none;font:inherit;color:inherit;text-align:left;padding:16px 24px;border-left:1px solid #EEECE8;cursor:pointer}
 .hecho:first-child{border-left:0}
@@ -781,9 +786,15 @@ tr.sel td{background:#FFF4F5!important}
   .busca input::placeholder{font-size:15px}
   .busca .kbd{display:none}
   .archivo-h{padding:16px 16px 0}
-  .regla-wrap{padding:14px 16px 4px}
-  .regla-eje{padding:6px 16px 12px}
-  .seg-c{min-width:52px;height:84px}
+  .estantes{padding:6px 16px 18px}
+  .mes-f{grid-template-columns:1fr;gap:6px;padding-top:14px}
+  .mes-f+.mes-f{display:none}
+  .mes-n{display:flex;align-items:baseline;gap:8px}
+  .cps{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 8px}
+  .cp{min-height:108px;padding:12px 9px 9px}
+  .cp .r{font-size:25px}
+  .cp .g{font-size:11.5px}
+  .cp.ult::after{top:-9px;right:6px}
   .hechos{grid-template-columns:1fr 1fr}
   .hecho{padding:14px 16px}
   .hecho:nth-child(3){border-left:0}
@@ -1763,7 +1774,7 @@ function buscar(){
   const q=$('#q').value.trim();
   $('#qLimpiar').classList.toggle('oculto',!q);
   const z=$('#resultado');
-  if(!q){z.innerHTML=inicioVacio();const rp=z.querySelector('.regla-wrap');if(rp)rp.scrollLeft=rp.scrollWidth;return;}
+  if(!q){z.innerHTML=inicioVacio();return;}
   /* parte de un despacho parcial: 100118093-2 */
   const mp=q.match(RX_PARTE);
   if(mp){
@@ -1800,26 +1811,26 @@ function buscar(){
   if(!res.length){z.innerHTML=`<div class="card vacio">${IC.lupa}<b>Sin resultados para “${esc(q)}”</b>Prueba con otra parte del nombre del cliente o con el número de guía.</div>`;return;}
   z.innerHTML=tablaRes(res,`${plural(res.length,'guía')} · ${cis.size===1?esc(titulo(BASE.dic.c[[...cis][0]])):pis.size?'placa '+esc(placaFmt(q)):plural(cis.size,'cliente')}`);
 }
-/* v13: sin búsqueda se ve el archivo como una regla de correlativos: cada carpeta ocupa el ancho de sus
-   números, agrupadas por mes, y al final lo que falta archivar. Tocar una carpeta abre su primera guía. */
+/* v13: sin búsqueda se ve el archivo: una fila por mes (el más reciente arriba) con sus carpetas,
+   todas del mismo tamaño, y al final lo que falta archivar. Tocar una carpeta abre su primera guía. */
 function inicioVacio(){
   const val=carpValidas(),maxG=IX.guias[IX.guias.length-1]||0;
   if(!val.length)return `<div class="card vacio">${IC.carpeta}<b>Aún no hay carpetas</b>Carga los correlativos en Datos y conexión.</div>`;
-  const ver=val.slice(-12),ult=val[val.length-1];
+  const ult=val[val.length-1];
   const sinArch=maxG>ult.fin?filasEnRango(ult.fin+1,maxG).length:0;
-  const grupos=[];
-  ver.forEach(c=>{const p=partesNombre(c.nombre),m=p.mes||c.nombre,g=grupos[grupos.length-1];
-    if(g&&g.m===m)g.cs.push({c,p});else grupos.push({m,cs:[{c,p}]});});
-  const tam=c=>Math.max(1,c.fin-c.ini+1);
-  let h=grupos.map(g=>{const peso=g.cs.reduce((a,x)=>a+tam(x.c),0);
-    return `<div class="mes-g" style="flex:${peso} 1 0"><b>${esc(cap(String(g.m).toLowerCase()))}</b><div class="cs">${g.cs.map(x=>
-      `<button class="seg-c${x.c===ult?' ult':''}" style="flex:${tam(x.c)} 1 0" data-rec="${x.c.ini}" title="${esc(x.c.nombre)} · guías ${x.c.ini} a ${x.c.fin}"><span class="r">${esc(x.p.tomo||'·')}</span><span class="n">${x.c.ini}</span></button>`).join('')}</div></div>`;}).join('');
-  if(sinArch)h+=`<div class="mes-g pend" style="flex:${Math.max(maxG-ult.fin,Math.round(tam(ult)/3))} 1 0"><b>Por archivar</b><div class="cs"><button class="seg-c pend" style="flex:1 1 0" data-ir="${esEditor()?'clasificar':'carpetas'}" title="Guías después de ${esc(ult.nombre)}"><span class="r">${fmt(sinArch)}</span><span class="n">${ult.fin+1}–${maxG}</span></button></div></div>`;
+  const meses=[];
+  val.forEach(c=>{const p=partesNombre(c.nombre),m=p.mes||c.nombre,g=meses[meses.length-1];
+    if(g&&g.m===m)g.cs.push({c,p});else meses.push({m,cs:[{c,p}]});});
+  const ver=meses.slice(-2).reverse();
+  const carpeta=x=>`<button class="cp${x.c===ult?' ult':''}" data-rec="${x.c.ini}" title="${esc(x.c.nombre)}: guías ${x.c.ini} a ${x.c.fin}">
+      <span class="r">${esc(x.p.tomo||x.c.nombre)}</span><span class="g">${x.c.ini}<br>${x.c.fin}</span><span class="n">${fmt(x.c.fin-x.c.ini+1)} guías</span></button>`;
+  const filas=ver.map((g,k)=>`<div class="mes-f">
+      <div class="mes-n"><b>${esc(cap(String(g.m)))}</b><small>${plural(g.cs.length,'carpeta')}</small></div>
+      <div class="cps">${g.cs.map(carpeta).join('')}${k===0&&sinArch?`<button class="cp pend" data-ir="${esEditor()?'clasificar':'carpetas'}" title="Guías después de ${esc(ult.nombre)}"><span class="r">${fmt(sinArch)}</span><span class="g">${ult.fin+1}<br>${maxG}</span><span class="n">por archivar</span></button>`:''}</div></div>`).join('');
   const pend=+($('#cntPend').textContent.replace(/\D/g,'')||0);
   return `<div class="archivo">
-    <div class="archivo-h"><h3>Así va el archivo</h3><small>${ver.length<val.length?'Las últimas '+ver.length+' carpetas':'Todas las carpetas'}; toca una para ver su primera guía</small></div>
-    <div class="regla-wrap"><div class="regla">${h}</div></div>
-    <div class="regla-eje"><span>${ver[0].ini}</span><span>${Math.max(maxG,ult.fin)}</span></div>
+    <div class="archivo-h"><h3>Así va el archivo</h3><small>Toca una carpeta para ver su primera guía</small>${meses.length>2?`<button class="lnk-v" data-ir="carpetas">Ver las ${CARP.length} carpetas</button>`:''}</div>
+    <div class="estantes">${filas}</div>
     <div class="hechos">
       <button class="hecho" data-ir="datos"><b>${fmt(BASE.rows.length)}</b><span>guías en la base</span></button>
       <button class="hecho" data-ir="carpetas"><b>${fmt(CARP.length)}</b><span>carpetas${VAL.errores?' · '+plural(VAL.errores,'error','errores'):''}</span></button>
