@@ -689,6 +689,11 @@ break;case"<bookViews":;case"<bookViews>":;case"</bookViews>":break;case"<workbo
     if(PERMITIDAS.indexOf(k)>=0&&typeof d[k]==='string'&&d[k].length<500000&&localStorage.getItem(k)===null)localStorage.setItem(k,d[k]);});
   history.replaceState(null,'',location.pathname+location.search);
 }catch(e){}})();
+/* Direcciones del Apps Script en la cuenta de la empresa (2026-11): si este navegador tenía
+   guardada la dirección vieja (cuenta personal), se cambia por la nueva una sola vez. */
+(function(){try{var V={'https://script.google.com/macros/s/AKfycbzPfXZFs9GVEfBfDERzGGzxO8OgoRaMOHIg_QO9jOpMP31BkvENFenAP9rubgh_GPcW4Q/exec':'https://script.google.com/macros/s/AKfycbzh72H0j_OxcQAltoltMq3TY8MYlzxYCgCyKor37VX1k7X1KAbsLZHLuamN3CntccwElA/exec','https://script.google.com/macros/s/AKfycbyNTe_wL3a2GKse5qBjRBuU4zpemFDrkvzI56ysXazt77L0wAKxEg5ykyl-bBO5DW2L/exec':'https://script.google.com/macros/s/AKfycbx8E2Ag_ZBNkyEbMytrKxOcFfUtwbKx9vW-dz3SPwwivvG6HrZg5yaSlJqkIxL9HykR/exec'};
+  ['prove_nube_url','prove_gps_url','prove_nube_mudado','ubg_datos_url'].forEach(function(k){var v=localStorage.getItem(k);if(v&&V[v.trim()])localStorage.setItem(k,V[v.trim()]);});
+}catch(e){}})();
 
 "use strict";
 /* =====================================================================
@@ -699,8 +704,8 @@ break;case"<bookViews":;case"<bookViews>":;case"</bookViews>":break;case"<workbo
    · Muestra la foto de la guía firmada que se subió desde Mi Ruta
      (mismo Apps Script: acciones estadoRuta y fotoVer).
    ===================================================================== */
-const VERSION='2026-11-15 · v10';
-const NUBE_URL_DEFECTO='https://script.google.com/macros/s/AKfycbzPfXZFs9GVEfBfDERzGGzxO8OgoRaMOHIg_QO9jOpMP31BkvENFenAP9rubgh_GPcW4Q/exec';
+const VERSION='2026-11-16 · v11';
+const NUBE_URL_DEFECTO='https://script.google.com/macros/s/AKfycbzh72H0j_OxcQAltoltMq3TY8MYlzxYCgCyKor37VX1k7X1KAbsLZHLuamN3CntccwElA/exec';
 const FOTOS_DESDE='2026-10-26';   // inicio del piloto de fotos de guía en Mi Ruta
 const INC_ID='';
 const LS_CRED='ubg_mr_cred', LS_PUB='ubg_pub_url';
@@ -973,7 +978,7 @@ function carpBadge(n){
      (administrador y facturadora). Los demás solo consultan.
    · Se entra con el mismo usuario del planificador.
    ===================================================================== */
-const DATOS_URL_DEFECTO='https://script.google.com/macros/s/AKfycbyNTe_wL3a2GKse5qBjRBuU4zpemFDrkvzI56ysXazt77L0wAKxEg5ykyl-bBO5DW2L/exec';   // ← dirección /exec del Apps Script del Buscador (se puede dejar fija aquí)
+const DATOS_URL_DEFECTO='https://script.google.com/macros/s/AKfycbx8E2Ag_ZBNkyEbMytrKxOcFfUtwbKx9vW-dz3SPwwivvG6HrZg5yaSlJqkIxL9HykR/exec';   // ← dirección /exec del Apps Script del Buscador (se puede dejar fija aquí)
 const LS_DAT={url:'ubg_datos_url',ses:'ubg_datos_ses'};
 const LOTE_SUBIDA=4000;       // guías por envío al subir una base
 let NUBE={estado:'off',error:'',info:null,ultima:0,intento:0};
